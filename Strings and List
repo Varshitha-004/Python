@@ -1,0 +1,68 @@
+#string_list_basics.py
+# Author: Varshitha S
+# Date: 2025-09-08
+# Topic: Basics of Strings and Lists in Python
+
+# ===============================
+# STRINGS
+# ===============================
+
+# What is a String? -> Sequence of characters inside quotes
+my_string = "Hello, Python!"
+
+# String Indexing (positive and negative)
+print("First character:", my_string[0])      # H
+print("Last character:", my_string[-1])      # !
+
+# String Slicing
+print("Substring (0:5):", my_string[0:5])    # Hello
+print("Substring (7:):", my_string[7:])      # Python!
+
+# String Functions
+print("Concatenation:", my_string + " Let's learn!")  # Hello, Python! Let's learn!
+print("Count of 'o':", my_string.count("o"))          # 2
+print("Uppercase:", my_string.upper())                # HELLO, PYTHON!
+print("Startswith 'Hello':", my_string.startswith("Hello"))  # True
+print("Endswith '!':", my_string.endswith("!"))              # True
+
+# Converting string to integer (if numeric)
+num_str = "123"
+num_int = int(num_str)
+print("String to Integer:", num_int, type(num_int))
+
+# ===============================
+# LISTS
+# ===============================
+
+# What is a List? -> Ordered, mutable collection
+my_list = [10, 20, 30, 40, 50]
+
+# Indexing & Slicing
+print("First element:", my_list[0])          # 10
+print("Last element:", my_list[-1])          # 50
+print("Slice (1:4):", my_list[1:4])          # [20, 30, 40]
+
+# Nested List
+nested_list = [1, [2, 3], [4, 5]]
+print("Nested Index [1][1]:", nested_list[1][1])  # 3
+
+# List Functions
+my_list.append(60)      # Add at end
+print("After append:", my_list)
+
+my_list.insert(2, 25)   # Insert at index 2
+print("After insert:", my_list)
+
+my_list.extend([70, 80])  # Extend with another list
+print("After extend:", my_list)
+
+my_list.remove(40)      # Remove element by value
+print("After remove:", my_list)
+
+popped = my_list.pop()  # Remove last element
+print("After pop:", my_list, "| Popped value:", popped)
+
+# List concatenation
+new_list = my_list + [90, 100]
+print("Concatenated List:",new_list)
+
